@@ -30,9 +30,5 @@ router.post("/wishes/new", (req, res, next) => {
   });
 });
 
-// route to show the about page:
-router.get("/about", (req, res, next) => {
-  res.render("about");
-});
 
 module.exports = router;
