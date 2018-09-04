@@ -21,6 +21,9 @@
           <li class="nav-item">
             <a class="nav-link" href="/">Home</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/">About</a>
+          </li>
           {{#if isConnected}}
           <a class="nav-link" href="/auth/logout">Logout</a>
           {{else}}
@@ -30,8 +33,6 @@
           <li class="nav-item">
             <a class="nav-link" href="/auth/signup">Signup</a>
           </li>
-          {{/if}} {{#if isAdmin}}
-          <a href="/users">Users list</a>
           {{/if}}
         </ul>
       </div>
@@ -39,7 +40,9 @@
   </nav>
 
   <div class="container pt-4">
+
     {{{body}}}
+
   </div>
 
   <script src='/javascripts/script.js'></script>

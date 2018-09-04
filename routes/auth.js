@@ -3,6 +3,8 @@ const passport = require("passport");
 const router = express.Router();
 const User = require("../models/User");
 
+// the following router were already in the irongenerate:
+
 // Bcrypt to encrypt passwords
 const bcrypt = require("bcrypt");
 const bcryptSalt = 10;

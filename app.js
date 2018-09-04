@@ -80,10 +80,23 @@ app.use(
 app.use(flash());
 require("./passport")(app);
 
+app.use((req, res, next) => {
+  if (req.isAuthenticated() && req.user) {
+    //req.isAuthenticated() will return true if user is logged in
+    res.locals.isConnected = true;
+  } else {
+    res.locals.isConnected = false;
+  }
+  next();
+});
+
 const index = require("./routes/index");
 app.use("/", index);
 
 const authRoutes = require("./routes/auth");
 app.use("/auth", authRoutes);
+
+const about = require("./views/about");
+app.use("/about", about);
 
 module.exports = app;

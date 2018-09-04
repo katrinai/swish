@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const wishSchema = new Schema({
@@ -9,12 +9,14 @@ const wishSchema = new Schema({
   comment: String,
   "price-range": String,
   "end-date": String
-}, {
+},
+  {
     timestamps: {
-      createdAt: 'created_at',
-      updatedAt: 'updated_at'
+      createdAt: "created_at",
+      updatedAt: "updated_at"
     }
-  });
+  }
+);
 
-const Wish = mongoose.model('Wish', wishSchema);
+const Wish = mongoose.model("Wish", wishSchema);
 module.exports = Wish;
