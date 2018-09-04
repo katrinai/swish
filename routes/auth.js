@@ -4,10 +4,15 @@ const router = express.Router();
 const User = require("../models/User");
 
 // the following router were already in the irongenerate:
-
 // Bcrypt to encrypt passwords
 const bcrypt = require("bcrypt");
 const bcryptSalt = 10;
+
+// SINGUP ROUTE
+router.get('./views/auth/signup', (req, res) => {
+  res.render('signup');
+})
+
 
 router.get("/login", (req, res, next) => {
   res.render("auth/login", { message: req.flash("error") });
