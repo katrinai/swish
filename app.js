@@ -96,7 +96,5 @@ app.use("/", index);
 const authRoutes = require("./routes/auth");
 app.use("/auth", authRoutes);
 
-const about = require("./views/about");
-app.use("/about", about);
 
 module.exports = app;
