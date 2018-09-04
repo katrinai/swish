@@ -1,0 +1,11 @@
+<h1>User profile {{username}}</h1>
+<p>{{password}}</p>
+
+<ul>
+  {{#each wishes}}
+  <li>
+    <h1>{{this.name}}</h1>
+    <img src="{{this.picture}}" alt="">
+  </li>
+  {{/each}}
+</ul>

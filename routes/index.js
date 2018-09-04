@@ -1,11 +1,17 @@
 const express = require("express");
 const router = express.Router();
 const User = require("../models/User");
-// const Wish = require("../models/Wish");
+const Wish = require("../models/Wish");
+const ensureLogin = require("connect-ensure-login");
 
 /* GET home page */
 router.get("/", (req, res, next) => {
   res.render("index");
+});
+
+// route to show the about page:
+router.get("/about", (req, res, next) => {
+  res.render("about");
 });
 
 // router to users, inclusive the check for the role
@@ -14,6 +20,17 @@ router.get("/users", (req, res, next) => {
     res.render(users - list, { users });
   });
 });
+
+router.get(
+  "/user-profile",
+  ensureLogin.ensureLoggedIn("/auth/login"),
+  (req, res) => {
+    Wish.find({ _owner: req.user._id }).then(wishes => {
+      console.log("------- WISHES ------", wishes);
+      res.render("user-profile", { wishes });
+    });
+  }
+);
 
 router.get("/wishes/new", (req, res, next) => {
   res.render("wishes-new");
@@ -29,6 +46,5 @@ router.post("/wishes/new", (req, res, next) => {
     res.redirect("/wishes/" + newWish._id);
   });
 });
-
 
 module.exports = router;
