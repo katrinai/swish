@@ -3,7 +3,6 @@ const router = express.Router();
 const User = require("../models/User");
 // const Wish = require("../models/Wish");
 
-
 /* GET home page */
 router.get("/", (req, res, next) => {
   res.render("index");
@@ -30,8 +29,6 @@ router.post("/wishes/new", (req, res, next) => {
     res.redirect("/wishes/" + newWish._id);
   });
 });
-
-
 
 
 module.exports = router;

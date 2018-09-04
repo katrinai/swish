@@ -21,3 +21,13 @@
     <a href="/auth/signup">Signup</a>
   </p>
 </form>
+
+<tbody>
+  {{#each entries}}
+  <tr>
+    <td>{{this.username}}</td>
+    <td>{{this.password}}</td>
+    <td><a href="/entries/{{this._id}}/delete">Delete</a></td>
+  </tr>
+  {{/each}}
+</tbody>

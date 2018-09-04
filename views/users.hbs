@@ -1,5 +1,12 @@
 <h1>The list of all people with swishes</h1>
 
+{{#if error}}
+<p>
+  <strong>Error</strong>: {{error}}
+</p>
+{{/if}}
+
+
 <ul>
   {{#each users}}
   <li>
