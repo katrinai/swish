@@ -1,5 +1,7 @@
 const mongoose = require('mongoose');
-const Entry = require('../models/User');
+const Wish = require('../models/Wish');
+const User = require('../models/User');
+const wishes = require("../data/wishes");
 
 mongoose
   .connect('mongodb://localhost/swish', { useNewUrlParser: true })
@@ -10,42 +12,42 @@ mongoose
     console.error('Error connecting to mongo', err)
   });
 
-let wishesToCreate = [
-  {
-    wish: "pillow"
-  },
-  {
-    wish: "jacket"
-  },
-  {
-    wish: "mug"
-  },
-  {
-    wish: "sketch book"
-  },
-  {
-    wish: "watch"
-  },
-  {
-    wish: "sketch book"
-  },
-  {
-    wish: "hip bag Berlin style"
-  },
-  {
-    wish: "birthday cake"
-  },
-  {
-    wish: "Gin"
-  },
-  {
-    wish: "MacBook Pro"
-  }
-]
+let user1 = new User({
+  username: "jessica",
+  password: "jessica"
+})
+
+let user2 = new User({
+  username: "katrin",
+  password: "katrin"
+})
+
+let users = [user1, user2]
+
+let wishesToCreate = wishes.map(wish => {
+  let randomNum = Math.floor(Math.random() * 2);
+  wish._owner = users[randomNum];
+  return wish;
+})
+
+console.log("WISHES --> ", wishesToCreate)
 
 Wish.deleteMany()
-  .then(() => Wish.create(wishesToCreate))
-  .then(wishes => {
-    console.log(wishes.length + ' wishes created')
-    mongoose.disconnect()
+  .then(() => {
+    return User.deleteMany()
   })
+  .then(() => {
+    console.log("All wishes and users deleted");
+    return Wish.create(wishesToCreate)
+  })
+  .then(newWishes => {
+    console.log(newWishes);
+    console.log(newWishes.length + " new wishes created");
+    return Promise.all([user1.save(), user2.save()])
+  })
+  .then(([users]) => {
+    console.log(users)
+    mongoose.disconnect();
+  })
+
+

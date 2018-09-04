@@ -16,17 +16,17 @@ router.get("/", (req, res, next) => {
 });
 
 // router to users, inclusive the check for the role
-router.get("/users", checkRoles("ADMIN"), (req, res, next) => {
+router.get("/users", (req, res, next) => {
   User.find().then(users => {
     res.render(users - list, { users });
   });
 });
 
-router.get("/wishes/new", ensureLoggedIn("/auth/login"), (req, res, next) => {
+router.get("/wishes/new", (req, res, next) => {
   res.render("wishes-new");
 });
 
-router.post("/wishes/new", ensureLoggedIn("/auth/login"), (req, res, next) => {
+router.post("/wishes/new", (req, res, next) => {
   console.log("DEBUG req.user", req.user);
   Wish.create({
     name: req.body.name,
