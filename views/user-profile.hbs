@@ -1,6 +1,10 @@
 <h1>User profile {{username}}</h1>
 <p>{{password}}</p>
 
+<h2>Requests to access my wish list: </h2>
+
+<br>
+<h2>My wish list:</h2>
 <ul>
   {{#each wishes}}
   <li>
@@ -9,3 +13,5 @@
   </li>
   {{/each}}
 </ul>
+<br>
+<button>Delete my profile</button>
