@@ -43,6 +43,10 @@ router.post("/wishes/new", (req, res, next) => {
   });
 });
 
+router.get("/wishes/:id/delete", (req, res, next) => {
+  res.redirect("/user-profile");
+});
+
 router.get(
   "/users",
   ensureLogin.ensureLoggedIn("/auth/login"),

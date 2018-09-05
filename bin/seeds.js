@@ -40,6 +40,7 @@ let user2 = new User({
 
 let users = [user1, user2];
 
+// ordnet randommäßig wishes zu owner zu
 let wishesToCreate = wishes.map(wish => {
   let randomNum = Math.floor(Math.random() * 2);
   wish._owner = users[randomNum];
