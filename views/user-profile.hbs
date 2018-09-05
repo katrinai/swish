@@ -2,18 +2,24 @@
 <h1>User profile {{username}}</h1>
 <p>{{password}}</p> --}}
 <br>
-<h2>My wish list:</h2>
+<h1>My wish list:</h1>
 <ul>
   {{#each wishes}}
   <li>
-    <h1>{{this.name}}</h1>
-    <img src="{{this.picture}}" alt="">
-    <br>Description: {{this.description}}
-    <br>Comment: {{this.comment}}
-    <br>Price range: {{this.priceRange}}
-    <br>End date: {{this.endDate}}
+    <p>
+      <h2>{{this.name}}</h2>
+      <img src="{{this.picture}}" alt="">
+      <br>Description: {{this.description}}
+      <br>Comment: {{this.comment}}
+      <br>Price range: {{this.priceRange}}
+      <br>End date: {{this.endDate}}
+      <br><button>Delete this wish</button>
+    </p>
   </li>
   <br> {{/each}}
 </ul>
+<br>
+<p><button class="btn btn-ember">Add a wish</button>
+</p>
 <br>
 <button>Delete my profile</button>
