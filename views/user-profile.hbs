@@ -3,17 +3,22 @@
 <p>{{password}}</p> --}}
 <br>
 <h2>My SWISH list:</h2>
-<ul>
+<div class="row">
   {{#each wishes}}
-  <li>
-    <h1>{{this.name}}</h1>
-    <img src="{{this.picture}}" alt="">
-    <br>Description: {{this.description}}
-    <br>Comment: {{this.comment}}
-    <br>Price range: {{this.priceRange}}
-    <br>End date: {{this.endDate}}
-  </li>
-  <br> {{/each}}
-</ul>
-<br>
-<button>Delete my profile</button>
+  <div class="col-md-4">
+    <div class="card m-1">
+      <img class="card-img-top" src="{{this.picture}}" alt="Card image cap" />
+      <div class="card-body">
+        <h5 class="card-title">{{this.name}}</h5>
+        <p class="card-text">
+          <strong>Description:</strong> {{this.description}} <br>
+          <strong>Comment:</strong> {{this.comment}} <br>
+          <strong>Price range:</strong> {{this.priceRange}} <br>
+          <strong>End date:</strong> {{this.endDate}}
+        </p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+  </div>
+  {{/each}}
+</div>
