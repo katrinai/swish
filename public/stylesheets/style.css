@@ -50,10 +50,6 @@ html {
 @-ms-viewport {
   width: device-width; }
 
-  .navbar-default {
-    background-color: #C7D847;
-    border-color: #E7E7E7;
-}
 
 article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
   display: block; }
