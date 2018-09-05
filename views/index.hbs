@@ -10,8 +10,8 @@
 
 
 <nav class="navbar navbar-light bg-light">
-  <form class="form-inline">
-    <input class="form-control mr-sm-2" id "username" name="Browse friends" type="search" placeholder="username or email" aria-label="Search">
-    <button class="btn btn-outline-success my-2 my-sm-0" id "browse" type="submit">Browse Friends</button>
+  <form class="form-inline" action="/users" method="get">
+    <input class="form-control mr-sm-2" name="search" type="text" placeholder="username" aria-label="Search">
+    <button class="btn btn-inline-success my-2 my-sm-0" type="submit">Browse Friends</button>
   </form>
 </nav>
