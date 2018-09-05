@@ -66,7 +66,8 @@ module.exports = [
   },
   {
     name: "Wireless Headphones",
-    picture: "https://images-na.ssl-images-amazon.com/images/I/31bx6t1XOTL._SX300_QL70_.jpg",
+    picture:
+      "https://images-na.ssl-images-amazon.com/images/I/31bx6t1XOTL._SX300_QL70_.jpg",
     description: "Beats Solo3 Wireless On-Ear Headphones - Gold",
     comment: "black ones would also be fine",
     priceRange: "200-250 EUR",

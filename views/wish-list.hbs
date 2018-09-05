@@ -1,8 +1,18 @@
 <h1>This is the wish list of {{username}}</h1>
 
-{{#each wishlists }}
-<h1>{{this.name}}</h1>
-<br>
-<p> <img src="{{this.picture}}" alt=""> </p>
-<p>Comment: {{this.comment}} <br>Price range: {{this.priceRange}}</p>
-{{/each}}
+<ul>
+  {{#each wishlists }}
+  <li>
+    <p>
+      <h2>{{this.name}}</h2>
+      <img src="{{this.picture}}" alt="">
+      <br>Description: {{this.description}}
+      <br>Comment: {{this.comment}}
+      <br>Price range: {{this.priceRange}}
+      <br>End date: {{this.endDate}}
+      <br>
+      
+    </p>
+  </li>
+  <br> {{/each}}
+</ul>
