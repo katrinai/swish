@@ -28,23 +28,29 @@ router.get(
   }
 );
 
-router.get("/wishes/new", (req, res, next) => {
-  res.render("wishes-new");
-});
-
 router.post("/wishes/new", (req, res, next) => {
-  console.log("DEBUG req.user", req.user);
+  console.log(
+    " ------------------- " + req.body + " --------------------------- "
+  );
+  req.body;
+  console.log("DEBUG req.user", req.user._id);
   Wish.create({
     name: req.body.name,
+    picture: req.body.picture,
     description: req.body.description,
-    _owner: req.user._id //important! most of the time use this with "ensureLoggedIn"
+    _owner: req.user._id, //important! most of the time use this with "ensureLoggedIn"
+    comment: req.body.comment,
+    priceRange: req.body.priceRange,
+    endDate: req.body.endDate
   }).then(newWish => {
-    res.redirect("/wishes/" + newWish._id);
+    res.redirect("../views/user-profile.hbs" + newWish._id);
   });
 });
 
 router.get("/wishes/:id/delete", (req, res, next) => {
-  res.redirect("/user-profile");
+  Wish.findByIdAndRemove(req.params.id).then(deleted => {
+    res.redirect("/user-profile");
+  });
 });
 
 router.get(
