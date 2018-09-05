@@ -1,17 +1,10 @@
 <h1>The list of all people with swishes</h1>
 
-{{#if error}}
-<p>
-  <strong>Error</strong>: {{error}}
-</p>
-{{/if}}
-
-
 <ul>
   {{#each users}}
   <li>
     <a href="/users/{{this._id}}">
-      {{this.firstname}} {{this.lastname}}
+      {{this.username}}
     </a>
   </li>
   {{/each}}

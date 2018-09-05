@@ -14,12 +14,12 @@ router.get("/about", (req, res, next) => {
   res.render("about");
 });
 
-// router to users, inclusive the check for the role
-router.get("/users", (req, res, next) => {
-  User.find().then(users => {
-    res.render(users - list, { users });
-  });
-});
+// router to users
+// router.get("/users", (req, res, next) => {
+//   User.find().then(usersFromDb => {
+//     res.render("users", {"users: usersFromDb"});
+//   });
+// });
 
 router.get(
   "/user-profile",
