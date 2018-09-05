@@ -29,21 +29,19 @@ router.get(
 );
 
 router.post("/wishes/new", (req, res, next) => {
-  console.log(
-    " ------------------- " + req.body + " --------------------------- "
-  );
-  req.body;
+  res;
+  //let { name, picture, description, comment, priceRange, endDate } = req.body;
   console.log("DEBUG req.user", req.user._id);
   Wish.create({
     name: req.body.name,
     picture: req.body.picture,
     description: req.body.description,
-    _owner: req.user._id, //important! most of the time use this with "ensureLoggedIn"
+    _owner: mongoose.Types.ObjectId(req.user._id), //important! most of the time use this with "ensureLoggedIn"
     comment: req.body.comment,
     priceRange: req.body.priceRange,
     endDate: req.body.endDate
   }).then(newWish => {
-    res.redirect("../views/user-profile.hbs" + newWish._id);
+    res.redirect("/user-profile");
   });
 });
 
