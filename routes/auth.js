@@ -9,10 +9,9 @@ const bcrypt = require("bcrypt");
 const bcryptSalt = 10;
 
 // SINGUP ROUTE
-router.get('./views/auth/signup', (req, res) => {
-  res.render('signup');
-})
-
+router.get("/signup", (req, res, next) => {
+  res.render("auth/signup");
+});
 
 router.get("/login", (req, res, next) => {
   res.render("auth/login", { message: req.flash("error") });
@@ -27,10 +26,6 @@ router.post(
     passReqToCallback: true
   })
 );
-
-router.get("/signup", (req, res, next) => {
-  res.render("auth/signup");
-});
 
 router.post("/signup", (req, res, next) => {
   const username = req.body.username;

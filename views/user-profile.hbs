@@ -1,12 +1,6 @@
+{{!--
 <h1>User profile {{username}}</h1>
-<p>{{password}}</p>
-
-<ul>
-  <img class "Mail" src="https://st2.depositphotos.com/3369547/11305/v/950/depositphotos_113058728-stock-illustration-letterl-envelope-icon-vector.jpg"
-    alt="My Requests">
-  <h2>Requests to access my wish list: </h2>
-</ul>
-
+<p>{{password}}</p> --}}
 <br>
 <h2>My wish list:</h2>
 <ul>
@@ -14,8 +8,12 @@
   <li>
     <h1>{{this.name}}</h1>
     <img src="{{this.picture}}" alt="">
+    <br>Description: {{this.description}}
+    <br>Comment: {{this.comment}}
+    <br>Price range: {{this.priceRange}}
+    <br>End date: {{this.endDate}}
   </li>
-  {{/each}}
+  <br> {{/each}}
 </ul>
 <br>
 <button>Delete my profile</button>

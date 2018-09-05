@@ -1,15 +1,16 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-const wishSchema = new Schema({
-  name: String,
-  picture: String,
-  _owner: { type: Schema.Types.ObjectId, ref: 'User' },
-  description: String,
-  comment: String,
-  "price-range": String,
-  "end-date": String
-},
+const wishSchema = new Schema(
+  {
+    name: String,
+    picture: String,
+    _owner: { type: Schema.Types.ObjectId, ref: "User" },
+    description: String,
+    comment: String,
+    priceRange: String, //TODO:
+    endDate: String
+  },
   {
     timestamps: {
       createdAt: "created_at",
