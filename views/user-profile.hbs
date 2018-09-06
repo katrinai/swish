@@ -3,11 +3,15 @@
 <p>{{password}}</p> --}}
 
 
+
+
 <br>
 <h2>My USER PIC HERE------>:</h2>
 <div class="row">
-  <a href="https://media.licdn.com/dms/image/C4D03AQGOtJLjuaB5WA/profile-displayphoto-shrink_800_800/0?e=1541635200&v=beta&t=KxZyzNcVHK8eubPiWWkuxlAd2SGMHCOLelLxxWKUZiU">Pic
-    here</a>
+  {{#each user}}
+  <strong>{{this.username}}</strong> {{this.picture}} <br>
+  {{/each}}
+</div>
 </div>
 
 
@@ -32,7 +36,7 @@
             <a href="/wishes/{{this._id}}/delete" class="btn btn-danger">Delete</a>
             <div class="row">
               </p>
-              <a href="/wishes/{{this._id}}/delete" class="btn btn-dark">Edit Swish</a>
+              <a href="/wishes/{{this._id}}/edit" class="btn btn-dark">Edit Swish</a>
             </div>
           </div>
         </div>
@@ -44,14 +48,14 @@
 
   <div class="col-md-4">
     <h3>Add a SWISH</h3>
-    <form action="/wishes/new" method="post">
+    <form action="/wishes/new" method="post" enctype="multipart/form-data">
       <div class="form-group">
         <label for="name">Name</label>
         <input type="text" class="form-control" name="name" placeholder="Enter a name for your wish.">
       </div>
       <div class="form-group">
         <label for="picture">Picture</label>
-        <input type="text" class="form-control" name="picture" placeholder="Enter a picture URL.">
+        <input type="file" class="form-control" name="picture" placeholder="Enter a picture URL.">
       </div>
 
       <div class="form-group">
