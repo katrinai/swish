@@ -1,0 +1,52 @@
+<!-- views/auth/signup.hbs -->
+<h2>Edit your SWISH</h2>
+
+
+
+
+
+
+<div class="img">
+  <img src="{{wish.picture}}" style="width:200px;" />
+</div>
+
+
+<form action="/wishes/{{wish._id}}/edit" method="post" enctype="multipart/form-data">
+  <div class="form-group">
+    <label for="name">New SWISH name</label>
+    <input class="form-control" type="text" name="name" placeholder="Type in your new SWISH name here" value="{{wish.name}}">
+  </div>
+
+  <div class="form-group">
+    <label for="picture">Picture</label>
+    <input class="form-control" type="file" name="picture" placeholder="Edit your pic here">
+  </div>
+
+  <div class="form-group">
+    <label for="description">Description</label>
+    <input class="form-control" type="text" name="description" placeholder="Edit your description here" value="{{wish.description}}">
+  </div>
+
+  <div class="form-group">
+    <label for="comment">comment</label>
+    <input class="form-control" type="text" name="comment" placeholder="Edit your comment here" value="{{wish.comment}}">
+  </div>
+
+  <div class="form-group">
+    <label for="priceRange">Price Range</label>
+    <input class="form-control" type="text" name="priceRange" placeholder="Edit your price range here" value="{{wish.priceRange}}">
+  </div>
+
+  <div class="form-group">
+    <label for="endDate">End Date</label>
+    <input class="form-control" type="text" name="endDate" placeholder="Edit your end date here" value="{{wish.endDate}}">
+  </div>
+
+  {{#if message }}
+  <div class="error-message">{{ message }}</div>
+  {{/if}}
+
+  <button type="submit" class="btn btn-dark">Confirm your changes</button>
+</form>
+
+{{wish}}

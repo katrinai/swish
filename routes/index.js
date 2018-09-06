@@ -5,6 +5,7 @@ const Wish = require("../models/Wish");
 const ensureLogin = require("connect-ensure-login");
 const mongoose = require("mongoose");
 const Grab = require("../models/Grab");
+const uploadCloud = require("../config/cloudinary.js");
 // const users = require("/users");
 
 /* GET home page */
@@ -24,19 +25,20 @@ router.get(
   (req, res) => {
     Wish.find({ _owner: req.user._id }).then(wishes => {
       console.log("------- WISHES ------", wishes);
-      res.render("user-profile", { wishes });
+      res.render("user-profile", { wishes, user: req.user });
     });
   }
 );
 
-router.post("/wishes/new", (req, res, next) => {
-  // TO DO: wishes/new wird eigentlich nicht benötigt
+router.post("/wishes/new", uploadCloud.single("picture"), (req, res, next) => {
   res;
   //let { name, picture, description, comment, priceRange, endDate } = req.body;
   console.log("DEBUG req.user", req.user._id);
+  const imgPath = req.file.url;
+  const imgName = req.file.originalname;
   Wish.create({
     name: req.body.name,
-    picture: req.body.picture,
+    picture: imgPath,
     description: req.body.description,
     _owner: mongoose.Types.ObjectId(req.user._id), //important! most of the time use this with "ensureLoggedIn"
     comment: req.body.comment,
@@ -53,11 +55,38 @@ router.get("/wishes/:id/delete", (req, res, next) => {
   });
 });
 
+// GET /wishes/5b9127c28bb96c0d1d7c1b6d/edit
 router.get("/wishes/:id/edit", (req, res, next) => {
-  Wish.findByIdAndUpdate(req.params.id).then(edited => {
-    res.redirect("/user-profile");
+  Wish.findById(req.params.id).then(wish => {
+    res.render("wish-edit", {
+      wish: wish
+    });
   });
 });
+
+router.post(
+  "/wishes/:id/edit",
+  uploadCloud.single("picture"),
+  (req, res, next) => {
+    if (req.file) {
+      console.log("REQ file --->", req.file);
+    } else {
+      console.log("WE DON#T HAVE A FILE");
+    }
+    Wish.findById(req.params.id).then(wish => {
+      // the updated values
+      wish.name = req.body.name;
+      wish.picture = req.file ? req.file.url : wish.picture;
+      wish.description = req.body.description;
+      wish.comment = req.body.comment;
+      wish.priceRange = req.body.priceRange;
+      wish.endDate = req.body.endDate;
+      wish.save().then(updated => {
+        res.redirect("/user-profile");
+      });
+    });
+  }
+);
 
 router.get(
   "/users",
