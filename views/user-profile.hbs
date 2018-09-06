@@ -1,6 +1,17 @@
 {{!--
 <h1>User profile {{username}}</h1>
 <p>{{password}}</p> --}}
+
+
+<br>
+<h2>My USER PIC HERE------>:</h2>
+<div class="row">
+  <a href="https://media.licdn.com/dms/image/C4D03AQGOtJLjuaB5WA/profile-displayphoto-shrink_800_800/0?e=1541635200&v=beta&t=KxZyzNcVHK8eubPiWWkuxlAd2SGMHCOLelLxxWKUZiU">Pic
+    here</a>
+</div>
+
+
+
 <br>
 <h2>My SWISH list:</h2>
 <div class="row">
@@ -19,12 +30,18 @@
               <strong>End date:</strong> {{this.endDate}}
             </p>
             <a href="/wishes/{{this._id}}/delete" class="btn btn-danger">Delete</a>
+            <div class="row">
+              </p>
+              <a href="/wishes/{{this._id}}/delete" class="btn btn-dark">Edit Swish</a>
+            </div>
           </div>
         </div>
       </div>
       {{/each}}
     </div>
   </div>
+
+
   <div class="col-md-4">
     <h3>Add a SWISH</h3>
     <form action="/wishes/new" method="post">

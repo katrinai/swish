@@ -28,7 +28,7 @@ router.get(
   }
 );
 
-router.post("/wishes/new", (req, res, next) => {
+router.post("/wishes/new", (req, res, next) => { // TO DO: wishes/new wird eigentlich nicht benötigt
   res;
   //let { name, picture, description, comment, priceRange, endDate } = req.body;
   console.log("DEBUG req.user", req.user._id);
@@ -47,6 +47,12 @@ router.post("/wishes/new", (req, res, next) => {
 
 router.get("/wishes/:id/delete", (req, res, next) => {
   Wish.findByIdAndRemove(req.params.id).then(deleted => {
+    res.redirect("/user-profile");
+  });
+});
+
+router.get("/wishes/:id/edit", (req, res, next) => {
+  Wish.findByIdAndUpdate(req.params.id).then(edited => {
     res.redirect("/user-profile");
   });
 });
