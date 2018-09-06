@@ -26,7 +26,7 @@ let pass = bcrypt.hashSync(password, saltRound);
 
 let user1 = new User({
   username: "jessica",
-  picture: "https://media.licdn.com/dms/image/C4E03AQE9XzbC5-vWag/profile-displayphoto-shrink_800_800/0?e=1541635200&v=beta&t=Smj1OxE2FdJiZ6hBsumsC5G7qEqOw4I8dI4UtD3X5jk",
+  picture: "https://res.cloudinary.com/djfaky39y/image/upload/v1536247715/swish/Jessica.png",
   password: pass
 });
 
