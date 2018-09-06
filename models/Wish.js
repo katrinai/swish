@@ -9,7 +9,8 @@ const wishSchema = new Schema(
     description: String,
     comment: String,
     priceRange: String, //TODO:
-    endDate: String
+    endDate: String,
+    grabbed: { type: Boolean, default: false }
   },
   {
     timestamps: {

@@ -1,0 +1,9 @@
+<h1>This is the list of your friends wishes</h1>
+
+{{#each grabs}}
+<h2>
+  <a href="/users/{{this._wish._owner}}/wishlist">
+    {{this._wish.name}}
+  </a>
+</h2>
+{{/each}}
