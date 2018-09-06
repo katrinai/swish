@@ -24,7 +24,7 @@ router.get(
   (req, res) => {
     Wish.find({ _owner: req.user._id }).then(wishes => {
       console.log("------- WISHES ------", wishes);
-      res.render("user-profile", { wishes });
+      res.render("user-profile", { wishes, user: req.user });
     });
   }
 );
@@ -65,6 +65,11 @@ router.get("/wishes/:id/edit", (req, res, next) => {
 });
 
 router.post("/wishes/:id/edit", uploadCloud.single('picture'), (req, res, next) => {
+  if (req.file) {
+    console.log("REQ file --->", req.file)
+  } else {
+    console.log("WE DON#T HAVE A FILE")
+  }
   Wish.findById(req.params.id).then(wish => {
     // the updated values
     wish.name = req.body.name;

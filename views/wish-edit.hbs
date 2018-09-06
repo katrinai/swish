@@ -1,8 +1,17 @@
 <!-- views/auth/signup.hbs -->
 <h2>Edit your SWISH</h2>
 
-<form action="/wishes/{{wish._id}}/edit" method="POST" id="form-container" enctype="multipart/form-data">
 
+
+
+
+
+<div class="img">
+  <img src="{{wish.picture}}" style="width:200px;" />
+</div>
+
+
+<form action="/wishes/{{wish._id}}/edit" method="post" enctype="multipart/form-data">
   <div class="form-group">
     <label for="name">New SWISH name</label>
     <input class="form-control" type="text" name="name" placeholder="Type in your new SWISH name here" value="{{wish.name}}">
