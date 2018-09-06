@@ -7,7 +7,8 @@
 <h2>My USER PIC HERE------>:</h2>
 <div class="row">
   <a href="https://media.licdn.com/dms/image/C4D03AQGOtJLjuaB5WA/profile-displayphoto-shrink_800_800/0?e=1541635200&v=beta&t=KxZyzNcVHK8eubPiWWkuxlAd2SGMHCOLelLxxWKUZiU">Pic
-    here</a>
+    here
+  </a>
 </div>
 
 
@@ -23,17 +24,18 @@
           <img class="card-img-top" src="{{this.picture}}" alt="Card image cap" />
           <div class="card-body">
             <h5 class="card-title">{{this.name}}</h5>
+
             <p class="card-text">
               <strong>Description:</strong> {{this.description}} <br>
               <strong>Comment:</strong> {{this.comment}} <br>
               <strong>Price range:</strong> {{this.priceRange}} <br>
               <strong>End date:</strong> {{this.endDate}}
             </p>
+
             <a href="/wishes/{{this._id}}/delete" class="btn btn-danger">Delete</a>
-            <div class="row">
-              </p>
-              <a href="/wishes/{{this._id}}/delete" class="btn btn-dark">Edit Swish</a>
-            </div>
+
+            <a href="/wishes/{{this._id}}/edit" class="btn btn-dark">Edit</a>
+
           </div>
         </div>
       </div>

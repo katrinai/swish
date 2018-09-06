@@ -4,6 +4,7 @@ const User = require("../models/User");
 const Wish = require("../models/Wish");
 const ensureLogin = require("connect-ensure-login");
 const mongoose = require("mongoose");
+const Grab = require("../models/Grab");
 // const users = require("/users");
 
 /* GET home page */
@@ -28,7 +29,8 @@ router.get(
   }
 );
 
-router.post("/wishes/new", (req, res, next) => { // TO DO: wishes/new wird eigentlich nicht benötigt
+router.post("/wishes/new", (req, res, next) => {
+  // TO DO: wishes/new wird eigentlich nicht benötigt
   res;
   //let { name, picture, description, comment, priceRange, endDate } = req.body;
   console.log("DEBUG req.user", req.user._id);
@@ -85,7 +87,7 @@ router.get(
       .populate("_owner")
       .then(wishlists => {
         let username = wishlists[0]._owner.username;
-        console.log("WISHKISTS ---->", wishlists);
+        console.log("WISHLISTS ---->", wishlists);
         if (req.isAuthenticated()) {
           res.render("wish-list", { wishlists, username });
         } else {
@@ -94,5 +96,27 @@ router.get(
       });
   }
 );
+
+router.get("/wishes/:wishId/grab", (req, res, next) => {
+  Wish.findByIdAndUpdate(
+    req.params.wishId,
+    { grabbed: true },
+    { new: true }
+  ).then(updatedWish => {
+    Grab.create({
+      _grabber: req.user._id,
+      _wish: updatedWish._id
+    });
+    res.redirect("/friends-wish-list");
+  });
+});
+
+router.get("/friends-wish-list", (req, res) => {
+  Grab.find({ _grabber: req.user._id })
+    .populate("_wish")
+    .then(grabs => {
+      res.render("friends-wish-list", { grabs });
+    });
+});
 
 module.exports = router;

@@ -1,18 +1,40 @@
 <h1>This is the wish list of {{username}}</h1>
+<br>
+<div class="row">
+  <div class="col-md-8">
+    <div class="row">
+      {{#each wishlists }}
 
-<ul>
-  {{#each wishlists }}
-  <li>
-    <p>
-      <h2>{{this.name}}</h2>
-      <img src="{{this.picture}}" alt="">
-      <br>Description: {{this.description}}
-      <br>Comment: {{this.comment}}
-      <br>Price range: {{this.priceRange}}
-      <br>End date: {{this.endDate}}
-      <br>
-      
-    </p>
-  </li>
-  <br> {{/each}}
-</ul>
+      <div class="col-md-4">
+
+        <div class="card m-1">
+
+          <img class="card-img-top" src="{{this.picture}}" alt="Card image cap">
+
+          <div class="card-body">
+            <h5 class="card-title">{{this.name}}</h5>
+
+            <p class="card-text">
+              <strong>Description:</strong> {{this.description}} <br>
+              <strong>Comment:</strong> {{this.comment}} <br>
+              <strong>Price range:</strong> {{this.priceRange}} <br>
+              <strong>End date:</strong> {{this.endDate}}
+
+            </p>
+            <div class="row">
+              </p>
+              {{#if this.grabbed}} Already grabbed {{else}} <a href="/wishes/{{this._id}}/grab" class="btn btn-dark">Grab
+                this wish</a> {{/if}}
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      {{/each}}
+    </div>
+
+  </div>
+
+</div>
