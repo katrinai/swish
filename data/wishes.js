@@ -80,5 +80,45 @@ module.exports = [
     comment: "for my liquor cabinet",
     priceRange: "30-35 EUR",
     endDate: "31.12.2018"
+  },
+  {
+    name: "Copic Marker Set",
+    picture: "https://images-na.ssl-images-amazon.com/images/I/71ZuZsHu7dL._SL1192_.jpg",
+    description: "COPIC Marker Set, 72 Stück",
+    comment: "want to scribble more often",
+    priceRange: "150 EUR",
+    endDate: "18.12.2018"
+  },
+  {
+    name: "Vitamix",
+    picture: "https://images-na.ssl-images-amazon.com/images/I/71ZuZsHu7dL._SL1192_.jpg",
+    description: "Best High-End Blender",
+    comment: "perfect for having smoothies and soup more often",
+    priceRange: "170-190 EUR",
+    endDate: "18.12.2018"
+  },
+  {
+    name: "Candy Grabber",
+    picture: "https://cdn.monsterzeug.info/images/product_images/popup_images/763_0.jpg",
+    description: "Candy Grabber, lioke the ones which can be found on a state fair. Without sweets",
+    comment: "perfect for having smoothies and soup more often",
+    priceRange: "30-40 EUR",
+    endDate: "18.12.2018"
+  },
+  {
+    name: "Beer Cooler",
+    picture: "https://cdn.monsterzeug.info/images/product_images/popup_images/xbierkuehler-eisblockform-fuer-bierkisten-925.jpg.pagespeed.ic.nOwhgh9UlP.webp",
+    description: "Beer Cooler in form of ice blocks. Fits exactly to a crate of beer. Perfect refreshment idea for hot summer days",
+    comment: "Need that!",
+    priceRange: "15-20 EUR",
+    endDate: "18.12.2018"
+  },
+  {
+    name: "Sun glasses",
+    picture: "https://files.slack.com/files-pri/T02CQ4EN4-FCLNH3TU1/image_from_ios.jpg",
+    description: "Blue mirrored sun glasses, High-quality acetate, UV Index 400, Must have Summer 2018.  ",
+    comment: "Urgent! Lost mine :(!",
+    priceRange: "50 EUR",
+    endDate: "18.12.2018"
   }
 ];
