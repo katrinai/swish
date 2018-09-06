@@ -25,10 +25,10 @@ router.get(
   (req, res) => {
     Wish.find({ _owner: req.user._id }).then(wishes => {
       console.log("------- WISHES ------", wishes);
+      console.log("USERRRRRRRRRRR", req.user)
       res.render("user-profile", { wishes, user: req.user });
     });
-  }
-);
+  });
 
 router.post("/wishes/new", uploadCloud.single("picture"), (req, res, next) => {
   res;

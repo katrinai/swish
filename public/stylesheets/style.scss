@@ -2,3 +2,14 @@ $primary: #c7d847;
 
 // First: npm install --save bootstrap
 @import "../../node_modules/bootstrap/scss/bootstrap";
+
+.profile-img {
+  width: 20vw;
+  border-radius: 50%;
+  height: 20vw;
+  overflow: hidden;
+  img {
+    width:100%;
+    height: auto;
+  }
+}

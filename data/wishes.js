@@ -12,7 +12,7 @@ module.exports = [
   {
     name: "jacket",
     picture:
-      "https://i.pinimg.com/originals/8c/21/45/8c21450cb0c2b80210c6a8bee1a593d1.jpg",
+      "https://res.cloudinary.com/djfaky39y/image/upload/v1536249100/swish/denim_jacket_oversized.jpg",
     description: "Oversized Denim jacket, light blue, size S",
     comment: "Already have enough jackets but anyway",
     priceRange: "70-90 EUR",
@@ -21,7 +21,7 @@ module.exports = [
   {
     name: "mug",
     picture:
-      "https://cdn.thisiswhyimbroke.com/images/get-shit-done-mug4-300x250.jpg",
+      "https://res.cloudinary.com/djfaky39y/image/upload/v1536249100/swish/get-shit_done_mug.jpg",
     description:
       "Get shit done, Mug XL, black with white print, Collection Why would you ever mince matters",
     comment: "Already have enough jackets but anyway",
@@ -40,7 +40,7 @@ module.exports = [
   {
     name: "watch",
     picture:
-      "https://i.pinimg.com/originals/1c/6d/99/1c6d995b7e68aad81632dea400d59f6c.jpg",
+      "https://res.cloudinary.com/djfaky39y/image/upload/v1536249100/swish/apple_watch.jpg",
     description: "Apple watch",
     comment: "As I always keep running late",
     priceRange: "55 EUR",
@@ -49,7 +49,7 @@ module.exports = [
   {
     name: "hip bag Berlin",
     picture:
-      "https://asphaltgold.de/media/catalog/product/cache/5/image/930x669/0f396e8a55728e79b48334e699243c07/h/i/hip-bag-rosa-1.jpg",
+      "https://res.cloudinary.com/djfaky39y/image/upload/v1536249101/swish/hip_bag_berlin.jpg",
     description: "Sputnik S, 2,2l",
     comment: "That´s so Berlin",
     priceRange: "40-50 EUR",
@@ -76,7 +76,7 @@ module.exports = [
   {
     name: "Gin",
     picture:
-      "https://www.gintlemen.com/wp-content/uploads/2016/04/dry-gin.jpg",
+      "https://res.cloudinary.com/djfaky39y/image/upload/v1536249100/swish/dry-gin.jpg",
     description: "Gin Sul",
     comment: "for my liquor cabinet",
     priceRange: "30-35 EUR",
@@ -85,7 +85,7 @@ module.exports = [
   {
     name: "Copic Marker Set",
     picture:
-      "https://images-na.ssl-images-amazon.com/images/I/71ZuZsHu7dL._SL1192_.jpg",
+      "https://res.cloudinary.com/djfaky39y/image/upload/v1536249100/swish/copic-marker.jpg",
     description: "COPIC Marker Set, 72 Stück",
     comment: "want to scribble more often",
     priceRange: "150 EUR",
@@ -103,7 +103,7 @@ module.exports = [
   {
     name: "Candy Grabber",
     picture:
-      "https://cdn.monsterzeug.info/images/product_images/popup_images/763_0.jpg",
+      "https://res.cloudinary.com/djfaky39y/image/upload/v1536249100/swish/candy-grabber.jpg",
     description: "Candy Grabber, lioke the ones which can be found on a state fair. Without sweets",
     comment: "perfect for having smoothies and soup more often",
     priceRange: "30-40 EUR",
@@ -112,7 +112,7 @@ module.exports = [
   {
     name: "Beer Cooler",
     picture:
-      "https://cdn.monsterzeug.info/images/product_images/popup_images/xbierkuehler-eisblockform-fuer-bierkisten-925.jpg.pagespeed.ic.nOwhgh9UlP.webp",
+      "https://res.cloudinary.com/djfaky39y/image/upload/v1536249100/swish/beer-cooler.jpg",
     description: "Beer Cooler in form of ice blocks. Fits exactly to a crate of beer. Perfect refreshment idea for hot summer days",
     comment: "Need that!",
     priceRange: "15-20 EUR",

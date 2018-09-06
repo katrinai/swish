@@ -36,7 +36,7 @@ pass = bcrypt.hashSync(password, saltRound);
 
 let user2 = new User({
   username: "katrin",
-  picture: "https://media.licdn.com/dms/image/C4E03AQG-Kgdy-l2SPQ/profile-displayphoto-shrink_800_800/0?e=1541635200&v=beta&t=VV2WvP4xNfhFicP8CKx1tP4_OK3OahL2nbxu7EpbIKw",
+  picture: "https://res.cloudinary.com/djfaky39y/image/upload/v1536247715/swish/katrin.jpg",
   password: pass
 });
 
@@ -46,7 +46,7 @@ pass = bcrypt.hashSync(password, saltRound);
 
 let user3 = new User({
   username: "ojuna",
-  picture: "https://media.licdn.com/dms/image/C4D03AQHtSp-UOML11A/profile-displayphoto-shrink_800_800/0?e=1541635200&v=beta&t=TttroD578dRuYZrAr0MzGgjVC87gVd4_QPS7O8FPI74",
+  picture: "https://res.cloudinary.com/djfaky39y/image/upload/v1536247714/swish/ojuna.jpg",
   password: pass
 });
 
@@ -56,7 +56,7 @@ pass = bcrypt.hashSync(password, saltRound);
 
 let user4 = new User({
   username: "carla",
-  picture: "https://media.licdn.com/dms/image/C4D03AQGOtJLjuaB5WA/profile-displayphoto-shrink_800_800/0?e=1541635200&v=beta&t=KxZyzNcVHK8eubPiWWkuxlAd2SGMHCOLelLxxWKUZiU",
+  picture: "https://res.cloudinary.com/djfaky39y/image/upload/v1536247714/swish/carla.jpg",
   password: pass
 });
 
@@ -66,7 +66,7 @@ pass = bcrypt.hashSync(password, saltRound);
 
 let user5 = new User({
   username: "nhan",
-  picture: "https://media.licdn.com/dms/image/C5603AQEk7tdH8GxaZg/profile-displayphoto-shrink_800_800/0?e=1541635200&v=beta&t=TAil6GbykK_FmQC6-ah8u-iCM0M338L1kuvdyT-dO2Y",
+  picture: "https://res.cloudinary.com/djfaky39y/image/upload/v1536247714/swish/nhan.jpg",
   password: pass
 });
 
@@ -76,7 +76,7 @@ pass = bcrypt.hashSync(password, saltRound);
 
 let user6 = new User({
   username: "ana",
-  picture: "https://media.licdn.com/dms/image/C4D03AQF14YTSZdknFQ/profile-displayphoto-shrink_800_800/0?e=1541635200&v=beta&t=8m7zwMDfylicniyVy7pc3miv12A5u_Vzs_k4TArz1xE",
+  picture: "https://res.cloudinary.com/djfaky39y/image/upload/v1536247713/swish/ana.jpg",
   password: pass
 });
 
@@ -86,7 +86,7 @@ pass = bcrypt.hashSync(password, saltRound);
 
 let user7 = new User({
   username: "jen",
-  picture: "https://media.licdn.com/dms/image/C4D03AQGOtJLjuaB5WA/profile-displayphoto-shrink_800_800/0?e=1541635200&v=beta&t=KxZyzNcVHK8eubPiWWkuxlAd2SGMHCOLelLxxWKUZiU",
+  picture: "https://res.cloudinary.com/djfaky39y/image/upload/v1536247714/swish/jen.png",
   password: pass
 });
 
@@ -96,7 +96,7 @@ pass = bcrypt.hashSync(password, saltRound);
 
 let user8 = new User({
   username: "anita",
-  picture: "https://media.licdn.com/dms/image/C4E03AQE9XzbC5-vWag/profile-displayphoto-shrink_800_800/0?e=1541635200&v=beta&t=Smj1OxE2FdJiZ6hBsumsC5G7qEqOw4I8dI4UtD3X5jk",
+  picture: "https://res.cloudinary.com/djfaky39y/image/upload/v1536247713/swish/anita.jpg",
   password: pass
 });
 
@@ -106,7 +106,7 @@ pass = bcrypt.hashSync(password, saltRound);
 
 let user9 = new User({
   username: "kash",
-  picture: "https://media.licdn.com/dms/image/C4D03AQGOtJLjuaB5WA/profile-displayphoto-shrink_800_800/0?e=1541635200&v=beta&t=KxZyzNcVHK8eubPiWWkuxlAd2SGMHCOLelLxxWKUZiU",
+  picture: "https://res.cloudinary.com/djfaky39y/image/upload/v1536247714/swish/kaschief.png",
   password: pass
 });
 
@@ -116,6 +116,7 @@ pass = bcrypt.hashSync(password, saltRound);
 
 let user10 = new User({
   username: "yolo - kash´s dog",
+  picture: "https://res.cloudinary.com/djfaky39y/image/upload/v1536247715/swish/kashs_dog_placeholder.png",
   password: pass
 });
 
@@ -125,7 +126,7 @@ pass = bcrypt.hashSync(password, saltRound);
 
 let user11 = new User({
   username: "flo",
-  picture: "https://media.licdn.com/dms/image/C5603AQHTCaMv3-SF8A/profile-displayphoto-shrink_800_800/0?e=1541635200&v=beta&t=KQGB_7CXz6b2033pRAnIRaNQ1G7ypwGSGqr_372nv78",
+  picture: "https://res.cloudinary.com/djfaky39y/image/upload/v1536247714/swish/flo.jpg",
   password: pass
 });
 
@@ -135,7 +136,7 @@ pass = bcrypt.hashSync(password, saltRound);
 
 let user12 = new User({
   username: "alina",
-  picture: "./public/images/Alina.png",
+  picture: "https://res.cloudinary.com/djfaky39y/image/upload/v1536247713/swish/alina.png",
   password: pass
 });
 
@@ -145,7 +146,7 @@ pass = bcrypt.hashSync(password, saltRound);
 
 let user13 = new User({
   username: "samuele",
-  picture: "https://media.licdn.com/dms/image/C4D03AQG6y45MGTq2cQ/profile-displayphoto-shrink_800_800/0?e=1541635200&v=beta&t=s9hae6Ct0PRMQCilj8vT2DW6B0I9CbobkaqiPBo5-S8",
+  picture: "https://res.cloudinary.com/djfaky39y/image/upload/v1536247715/swish/samuele.jpg",
   password: pass
 });
 
@@ -155,7 +156,7 @@ pass = bcrypt.hashSync(password, saltRound);
 
 let user14 = new User({
   username: "bhavana",
-  picture: "./public/images/bhavana.png",
+  picture: "https://res.cloudinary.com/djfaky39y/image/upload/v1536247714/swish/bhavana.png",
   password: pass
 });
 
@@ -165,7 +166,7 @@ pass = bcrypt.hashSync(password, saltRound);
 
 let user15 = new User({
   username: "dalina",
-  picture: "https://media.licdn.com/dms/image/C4D03AQHDqHEzIqKL9g/profile-displayphoto-shrink_800_800/0?e=1541635200&v=beta&t=j-Sa8n6ZzBMMVH54Vtgec2yICQfltTrZ__VfyDhOGV0",
+  picture: "https://res.cloudinary.com/djfaky39y/image/upload/v1536247714/swish/dalina.jpg",
   password: pass
 });
 
@@ -175,7 +176,7 @@ pass = bcrypt.hashSync(password, saltRound);
 
 let user16 = new User({
   username: "tormod",
-  picture: "./public/images/tormod.png",
+  picture: "https://res.cloudinary.com/djfaky39y/image/upload/v1536247715/swish/tormod.png",
   password: pass
 });
 
@@ -228,7 +229,8 @@ let user21 = new User({
 });
 
 
-let users = [user1, user2];
+
+let users = [user1, user2, user3, user4, user5, user6, user7, user8, user9, user10, user11, user12, user13, user14, user15, user16, user17, user18, user19, user20, user21];
 
 // ordnet randommäßig wishes zu owner zu
 let wishesToCreate = wishes.map(wish => {
