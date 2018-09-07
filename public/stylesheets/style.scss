@@ -1,18 +1,28 @@
 $primary: #c7d847;
+$dark: #3e846e;
 // First: npm install --save bootstrap
 @import "../../node_modules/bootstrap/scss/bootstrap";
 
+body {
+  padding-top: 70px;
+}
+
 .profile-img {
-  width: 20vw;
+  width: 10vw;
   border-radius: 50%;
-  height: 20vw;
+  height: 10vw;
   overflow: hidden;
   img {
-    width:100%;
+    width: 100%;
     height: auto;
   }
 }
 
 .logo {
-width: 15vw;
+  width: 8vw;
+}
+
+.homepage-img img {
+  width: 70%;
+  height: auto;
 }
