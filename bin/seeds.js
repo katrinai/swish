@@ -233,10 +233,14 @@ let user21 = new User({
 let users = [user1, user2, user3, user4, user5, user6, user7, user8, user9, user10, user11, user12, user13, user14, user15, user16, user17, user18, user19, user20, user21];
 
 // ordnet randommäßig wishes zu owner zu
-let wishesToCreate = wishes.map(wish => {
-  let randomNum = Math.floor(Math.random() * 13);
-  wish._owner = users[randomNum];
-  return wish;
+let wishesToCreate = [];
+users.map(user => {
+  for (let i = 0; i < 2; i++) {
+    let randomNum = Math.floor(Math.random() * wishes.length);
+    let wish = wishes[randomNum];
+    wish._owner = user._id;
+    wishesToCreate.push(wish);
+  }
 });
 
 console.log("WISHES --> ", wishesToCreate);

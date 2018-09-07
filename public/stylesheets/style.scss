@@ -1,5 +1,4 @@
 $primary: #c7d847;
-
 // First: npm install --save bootstrap
 @import "../../node_modules/bootstrap/scss/bootstrap";
 
@@ -12,4 +11,8 @@ $primary: #c7d847;
     width:100%;
     height: auto;
   }
+}
+
+.logo {
+width: 15vw;
 }
