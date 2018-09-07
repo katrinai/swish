@@ -25,10 +25,11 @@ router.get(
   (req, res) => {
     Wish.find({ _owner: req.user._id }).then(wishes => {
       console.log("------- WISHES ------", wishes);
-      console.log("USERRRRRRRRRRR", req.user)
+      console.log("USERRRRRRRRRRR", req.user);
       res.render("user-profile", { wishes, user: req.user });
     });
-  });
+  }
+);
 
 router.post("/wishes/new", uploadCloud.single("picture"), (req, res, next) => {
   res;
@@ -115,12 +116,14 @@ router.get(
     Wish.find({ _owner: req.params.id })
       .populate("_owner")
       .then(wishlists => {
-        let username = wishlists[0]._owner.username;
-        console.log("WISHLISTS ---->", wishlists);
-        if (req.isAuthenticated()) {
+        if (wishlists.length !== 0) {
+          let username = wishlists[0]._owner.username;
+          console.log("WISHLISTS ---->", wishlists);
           res.render("wish-list", { wishlists, username });
         } else {
-          res.redirect("/auth/login");
+          res.render("wish-list", {
+            message: "Your friend added no wishes. Sorry..."
+          });
         }
       });
   }

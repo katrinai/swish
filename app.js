@@ -15,7 +15,7 @@ const flash = require("connect-flash");
 
 mongoose
   .connect(
-    "mongodb://localhost/swish",
+    process.env.MONGODB_URI,
     { useNewUrlParser: true }
   )
   .then(x => {
@@ -64,8 +64,6 @@ hbs.registerHelper("ifUndefined", (value, options) => {
     return options.fn(this);
   }
 });
-
-
 
 // default value for title local
 app.locals.title = "Swish - your friend´s wish! ";

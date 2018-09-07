@@ -3,7 +3,9 @@
 <div class="row">
   <div class="col-md-8">
     <div class="row">
-      {{#each wishlists }}
+      {{#if message}}
+      <h3>Your friend added no wishes</h3>
+      {{ else }} {{#each wishlists }}
 
       <div class="col-md-4">
 
@@ -32,7 +34,7 @@
 
       </div>
 
-      {{/each}}
+      {{/each}} {{/if}}
     </div>
 
   </div>
